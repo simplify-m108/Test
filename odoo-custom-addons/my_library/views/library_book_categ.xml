@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Data records go here -->
+    <!--Action that opens the views:-->
+    <record id='library_book_category_action' model='ir.actions.act_window'>
+        <field name="name">Library Books Categories</field>
+        <field name="res_model">library.book.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--Menu items:-->
+<menuitem name="Book Categories" id="library_book_category_menu" parent="library_base_menu" action="library_book_category_action"/>
+    <!--Custom form view:-->
+    <record id="library_book_category_view_form" model="ir.ui.view">
+        <field name="name">Library Categories Form</field>
+        <field name="model">library.book.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name = "name"/>
+                    </group>
+                    <group>
+                        <field name = "parent_id"/>
+                    </group>
+                </group>
+                <group>
+                    <field name = "child_ids"/>
+                </group>
+                <group>
+                    <button name = "create_categories" string="Create Categories" type="object"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <!--Custom tree (list) view:-->
+    <record id="library_book_category_view_tree" model="ir.ui.view">
+        <field name="name">Library Book List</field>
+        <field name="model">library.book.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+<!--Search option:-->
+    <record id="library_book_view_search" model="ir.ui.view">
+        <field name="name">Library Book Search</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="author_ids"/>
+                <filter string="Without Authors" name="without_author" domain="[('author_ids','=',False)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>
+
+
+
+

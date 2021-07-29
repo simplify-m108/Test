@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Data records go here -->
+    <!--Action that opens the views:-->
+    <record id='university_teachers_action' model='ir.actions.act_window'>
+        <field name="name">University Teachers</field>
+        <field name="res_model">university.teachers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--Menu items:-->
+    <menuitem name="University" id="university_base_menu" />
+    <menuitem name="Teachers" id="university_teachers_menu" parent="university_base_menu" action="university_teachers_action"/>
+    <!--Custom form view:-->
+
+</odoo>

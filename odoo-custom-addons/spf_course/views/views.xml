@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="spf_course/.list">
+      <field name="name">spf_course/ list</field>
+      <field name="model">spf_course/.spf_course/</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="spf_course/.action_window">
+      <field name="name">spf_course/ window</field>
+      <field name="res_model">spf_course/.spf_course/</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="spf_course/.action_server">
+      <field name="name">spf_course/ server</field>
+      <field name="model_id" ref="model_spf_course/_spf_course/"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="spf_course/" id="spf_course/.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="spf_course/.menu_1" parent="spf_course/.menu_root"/>
+    <menuitem name="Menu 2" id="spf_course/.menu_2" parent="spf_course/.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="spf_course/.menu_1_list" parent="spf_course/.menu_1"
+              action="spf_course/.action_window"/>
+    <menuitem name="Server to list" id="spf_course/" parent="spf_course/.menu_2"
+              action="spf_course/.action_server"/>
+-->
+  </data>
+</odoo>

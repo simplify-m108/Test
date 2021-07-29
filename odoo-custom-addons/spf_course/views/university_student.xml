@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Data records go here -->
+    <!--Action that opens the views:-->
+    <record id='university_student_action' model='ir.actions.act_window'>
+        <field name="name">University Student</field>
+        <field name="res_model">university.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--Menu items:-->
+    <menuitem name="University" id="university_base_menu" />
+    <menuitem name="Students" id="university_student_menu" parent="university_base_menu" action="university_student_action"/>
+<!--     &lt;!&ndash;Custom tree (list) view:&ndash;&gt;-->
+<!--    <record id="university_student_view_tree" model="ir.ui.view">-->
+<!--        <field name="name">University Student</field>-->
+<!--        <field name="model">university.student</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree>-->
+<!--                <field name="name"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--     &lt;!&ndash;Custom form view:&ndash;&gt;-->
+<!--    <record id="university_student_form" model="ir.ui.view">-->
+<!--        <field name="name">university.student.form</field>-->
+<!--        <field name="model">university.student</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <group>-->
+<!--                    <group>-->
+<!--                        <field name = "name"/>-->
+<!--                    </group>-->
+<!--                <group>-->
+<!--                    <field name = "description"/>-->
+<!--                </group>-->
+<!--                </group>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>
+
+
+
+
